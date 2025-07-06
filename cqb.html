@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ПРО СТРАЙКБОЛ: CQB</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="media/cqbicon.jpg">
+</head>
+<body>
+    <header>
+        <div class="headerleft">
+            <button class="headbutton" onclick="document.location='index.html'">О страйкболе</button>
+            <button class="headbutton current" onclick="document.location='cqb.html'">CQB</button>
+            <button class="headbutton" onclick="document.location='milsim.html'">MilSim </button>
+        </div>
+        <div class="headerright">
+            <button class="headbutton" onclick="document.location='about.html'">Об авторе</button>
+        </div>
+    </header>
+
+    <div class="preloader">
+        <div class="preloader__content">
+            <div class="preloader__spinner"></div>
+            <p class="preloader__text">Загрузка...</p>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            const preloader = document.querySelector('.preloader');
+            preloader.classList.add('preloader--hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>

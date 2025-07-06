@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ПРО СТРАЙКБОЛ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="media/icon.jpg">
+</head>
+<body>
+    <header>
+        <div class="headerleft">
+            <button class="headbutton current" onclick="document.location='index.html'">О страйкболе</button>
+            <button class="headbutton" onclick="document.location='cqb.html'">CQB</button>
+            <button class="headbutton" onclick="document.location='milsim.html'">MilSim </button>
+        </div>
+        <div class="headerright">
+            <button class="headbutton" onclick="document.location='about.html'">Об авторе</button>
+        </div>
+    </header>
+    <div class="slider-quote">
+        <div class="slider">
+            <img src="media/slider1.jpg" class="slide">
+            <img src="media/slider2.jpg" class="slide">
+            <img src="media/slider3.jpg" class="slide">
+            <img src="media/slider4.jpg" class="slide">
+            <img src="media/slider5.jpg" class="slide">
+            <img src="media/slider6.jpg" class="slide">
+            <img src="media/slider7.jpg" class="slide">
+            <img src="media/slider8.jpg" class="slide">
+            <img src="media/slider9.jpg" class="slide">
+            <img src="media/slider10.jpg" class="slide">
+            <img src="media/slider11.jpg" class="slide">
+        </div>
+        <div class="quote">
+            "Страйкбол — это не просто хобби, это стиль жизни, где тактика, командная работа и адреналин сливаются воедино!"
+        </div>
+    </div>
+    <div class="description">
+        <h1 class="description-h1">Что такое страйкбол?</h1>
+        <p class="description-p">Страйкбол — это командная тактическая игра, в которой участники используют пневматические реплики реального оружия, стреляющие пластиковыми шариками (6 мм или 8 мм). Это увлекательное сочетание спорта, стратегии и адреналина, где важны не только меткость и скорость, но и слаженная работа в команде.</p>
+        <p class="description-p">Игра проходит на различных локациях: от городских построек и заброшенных зданий до лесных массивов и специальных полигонов. Участники распределяются по командам и выполняют задания — захват точек, уничтожение противника или защиту важного объекта.</p>
+        <p class="description-p">Страйкбол подходит для всех, кто любит активный отдых и хочет почувствовать себя частью настоящей тактической операции. Здесь нет возрастных ограничений (кроме минимального возраста для участия), а экипировку можно подобрать под любой уровень подготовки.</p>
+    </div>
+    <div class="links">
+        <h1 class="links-h1">Узнайте подробнее про два самых популярных направления страйкбола:</h1>
+        <div class="linkbuttons">
+            <button class="cqb" onclick="document.location='cqb.html'">
+                <div class="cqb-text">CQB (Close Quarters Battle) — динамичные бои в закрытых помещениях с упором на скорость и реакцию.</div>
+            </button>
+            <button class="milsim" onclick="document.location='milsim.html'">
+                <div class="milsim-text">MilSim (Military Simulation) — максимально реалистичные сценарии с длительными миссиями и военной тактикой.</div>
+            </button>
+        </div>
+    </div>
+    <div class="end"></div>
+    <div class="preloader">
+        <div class="preloader__content">
+            <div class="preloader__spinner"></div>
+            <p class="preloader__text">Загрузка...</p>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            const preloader = document.querySelector('.preloader');
+            preloader.classList.add('preloader--hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>

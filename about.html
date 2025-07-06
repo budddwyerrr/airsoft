@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ПРО СТРАЙКБОЛ: Об авторе</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="media/abouticon.jpg">
+</head>
+<body>
+    <header>
+        <div class="headerleft">
+            <button class="headbutton" onclick="document.location='index.html'">О страйкболе</button>
+            <button class="headbutton" onclick="document.location='cqb.html'">CQB</button>
+            <button class="headbutton" onclick="document.location='milsim.html'">MilSim </button>
+        </div>
+        <div class="headerright">
+            <button class="headbutton current" onclick="document.location='about.html'">Об авторе</button>
+        </div>
+    </header>
+
+    <div class="about">
+        <img src="media/me.jpg" class="about-image" />
+        <div class="about-block">
+            <p class="about-p">Меня зовут Фомичев Кирилл. Я родился и вырос в Ижевске, где окончил Гимназию №56, а сейчас учусь в КНИТУ-КАИ по направлению «Прикладная информатика в экономике».</p>
+            <p class="about-p">Страйкбол — моё главное увлечение. Я занимаюсь им уже более двух лет. В Ижевске я состоял в команде, а после переезда в Казань участвую в открытых играх. Для меня это не просто спорт, а активный отдых, который даёт адреналин, командный дух и яркие эмоции.</p>
+            <p class="about-p">Я хочу популяризировать страйкбол. Мне важно рассказать как можно большему количеству людей об этом увлекательном виде активности. Страйкбол сочетает в себе тактику, физическую подготовку и общение с единомышленниками — это то, что может увлечь многих.</p>
+        </div>
+    </div>
+
+    <div class="end"></div>
+
+    <div class="preloader">
+        <div class="preloader__content">
+            <div class="preloader__spinner"></div>
+            <p class="preloader__text">Загрузка...</p>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            const preloader = document.querySelector('.preloader');
+            preloader.classList.add('preloader--hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>
