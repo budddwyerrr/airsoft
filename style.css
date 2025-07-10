@@ -4,11 +4,14 @@
 
 body {
     background-color: rgb(30 30 30);
-    background-image: url(https://preview.redd.it/1920x1080-topography-wallpapers-made-by-me-request-for-v0-csbsjjh6ar1a1.jpg?width=1080&crop=smart&auto=webp&s=837441fdbe88de84e08cad2c8ac5cec629b4ef1d);
+    background:
+        url(https://preview.redd.it/1920x1080-topography-wallpapers-made-by-me-request-for-v0-csbsjjh6ar1a1.jpg?width=1080&crop=smart&auto=webp&s=837441fdbe88de84e08cad2c8ac5cec629b4ef1d);
     margin: 0;
 }
 
 header {
+    backdrop-filter: blur(5px);
+    margin: 0;
     z-index: 10;
     top: 0;
     left: 0;
@@ -82,7 +85,7 @@ header {
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 100px 50px rgba(0,0,0,0.8);
-    flex-shrink: 0;
+    background-color: rgba(0 0 0 / .6);
 }
 
 .slide {
@@ -126,8 +129,9 @@ header {
 
 .description {
     box-sizing: border-box;
-    width: 90%;
-    margin: 250px 5% 0 5%;
+    width: 100%;
+    margin: 250px 0 0;
+    padding: 0 5%;
     background-color: rgba(0 0 0 / .5);
     box-shadow: 0px 0px 150px 80px rgba(0, 0, 0, 0.6);
 }
@@ -161,7 +165,7 @@ header {
     font-family: 'JetBrains Mono', monospace;
     background-color: rgb(0 0 0 / .0);
     font-weight: 1000;
-    font-size: 40px;
+    font-size: 33px;
     text-transform: uppercase;
     color: white;
 }
@@ -173,56 +177,19 @@ header {
     gap: 2%;
 }
 
-
-
 .cqb {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    background-color: rgba(0 0 0 / .0);
     background-image: url(media/cqb.png);
-    background-size: cover;
-    border: 0 dashed rgba(0 0 0 / .0);
-    box-shadow: 0px 0px 41px 11px rgba(0, 0, 0, 0.9);
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
-
-.cqb-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0 0 0 / .4), rgba(0 0 0 / 0.8));
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 30px;
-    font-weight: 1000;
-    text-transform: uppercase;
-    text-align: left;
-    padding: 0 3%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.cqb:hover {
-    transform: scale(1.05);
-}
-
-    .cqb:hover .cqb-text {
-        opacity: 1;
-    }
 
 .milsim {
+    background-image: url(media/milsim.jpg);
+}
+
+.cqb, .milsim {
     position: relative;
     width: 50%;
     height: 100%;
     background-color: rgba(0 0 0 / .0);
-    background-image: url(media/milsim.jpg);
     background-size: cover;
     border: 0 dashed rgba(0 0 0 / .0);
     box-shadow: 0px 0px 41px 11px rgba(0, 0, 0, 0.9);
@@ -230,7 +197,7 @@ header {
     transition: all 0.3s ease;
 }
 
-.milsim-text {
+.cqb-text, .milsim-text {
     position: absolute;
     top: 0;
     left: 0;
@@ -246,16 +213,16 @@ header {
     font-weight: 1000;
     text-transform: uppercase;
     text-align: left;
-    padding: 0 3%;
+    padding: 0 5%;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.milsim:hover {
+.cqb:hover, .milsim:hover {
     transform: scale(1.05);
 }
 
-    .milsim:hover .milsim-text {
+    .cqb:hover .cqb-text, .milsim:hover .milsim-text {
         opacity: 1;
     }
 
@@ -265,30 +232,219 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 78vh;
-    gap: 7%;
+    height: auto;
+    gap: 5%;
+}
+
+.about-info {
+    width: 30%;
 }
 
 .about-image {
-    width: auto;
-    height: 100%;
     box-shadow: 0 0 50px 20px rgba(0,0,0,0.7);
+    height: 10%;
+    width: 100%;
 }
 
 .about-block {
+    display: block;
+    width: 65%;
     height: 100%;
-    background-color: rgba(0 0 0 / .4);
-    box-shadow: 0px 0px 150px 80px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+    height: 60%;
+    overflow: auto;
+}
+
+.airsoft {
+    position: relative;
+    height: 30vw;
+    width: 100%;
+    background-color: rgba(0 0 0 / .0);
+    background-image: url(media/airsoft.jpg);
+    background-size: cover;
+    border: 0 dashed rgba(0 0 0 / .0);
+    box-shadow: 0px 0px 41px 11px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.airsoft-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0 0 0 / .4), rgba(0 0 0 / 0.8));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 60px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0 3%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.airsoft:hover {
+    transform: scale(1.05);
+}
+
+    .airsoft:hover .airsoft-text {
+        opacity: 1;
+    }
+
+.about-contact {
+    padding-top: 5%;
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.mylinks {
+    margin-top: 5%;
+    background-color: rgba(0 0 0 / .33);
+    border-radius: 10%;
+}
+
+.mylink {
+    padding: 5% 8%;
+    width: 100%;
+    display: inline-flex;
+    align-content: center;
+    justify-content: space-between;
+    gap: 5%;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+}
+
+.mylink-icon {
+    height: 10%;
+    width: 10%;
+}
+
+.mylink-text {
+    color: white;
+    width: 85%;
+    transition: all 0.3s ease-in-out;
+}
+
+.mylink-text:visited {
+    color: white;
+}
+
+.mylink-text:hover {
+    opacity: .5;
 }
 
 .about-p {
-    height: 33%;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 400;
     font-size: 33px;
     color: white;
-    overflow: auto;
+    margin: 5% 0;
+}
+
+.cqb-start, .milsim-start {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 3%;
+}
+
+.cqb-start {
+    background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .3), rgba(0 0 0 / 1)), url(https://urbantactical.com/cdn/shop/articles/landing-page-team-cqb-episode-1-d-01_1.png?v=1717691658&width=1600);
+}
+
+.milsim-start {
+    background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .3), rgba(0 0 0 / 1)), url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MilSim_Total_War_2012.jpg/1920px-MilSim_Total_War_2012.jpg);
+}
+
+.cqb-description {
+    width: 100%;
     margin: 0;
+    padding: 100px 5% 2%;
+    background: linear-gradient(rgba(0 0 0 / 1), rgba(0 0 0 / .5), rgba(0 0 0 / .5));
+    box-shadow: 0px 0px 150px 80px rgba(0, 0, 0, 0.6);
+}
+
+.cqb-description-p {
+    margin-top: 0;
+    margin-bottom: 5%;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 200;
+    font-size: 30px;
+    color: white;
+}
+
+.cqb-video-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 5%;
+}
+
+.cqb-video {
+    width: 45%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 100px 50px rgba(0,0,0,0.8);
+    background-color: rgba(0 0 0 / .6);
+}
+
+.cqb-video-text {
+    width: 50%;
+    align-self: center;
+}
+
+.cqb-equip-block {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 5%;
+}
+
+.cqb-equip {
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 100px 50px rgba(0,0,0,0.8);
+    background-color: rgba(0 0 0 / .6);
+}
+
+.cqb-equip-text {
+    width: 45%;
+    align-self: center;
+}
+
+.milsim-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
 }
 
 .preloader {
